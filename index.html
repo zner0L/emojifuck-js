@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Skilldrick's JavaScript brainfuck interpreter</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/style.css" rel="stylesheet" media="screen">
+    <title>😃💏 – Emojifuck</title>
+    <meta charset="utf-8">
+    <link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background: #eee;
+      }
+      .wrapper {
+        margin: auto;
+        width: 900px;
+      }
+      
+      #code {
+        font-family: monospace;
+        height: 350px;
+        max-width: 100%;
+      }
+      #output {
+        height: 200px;
+        overflow-y: scroll;
+        font-family: monospace;
+        background-color: #000;
+        color: #fff;
+      }
+      .output-group {
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
-    <h1>brainfuck</h1>
-    <form>
-      <table>
-        <tr>
-          <td><p><label for='code'>Code</label></p></td>
-          <td><input name='code' id='code'></input></td>
-        </tr>
-        <tr>
-          <td><label for='input'>Input</label></td>
-          <td><input name='input' id='input'></input></td>
-        </tr>
-      </table>
-      <p>
-      <input type='submit' value='Run' />
-      </p>
+    <div class="wrapper">
+    <h1>😃💏 – Emojifuck <span class="small">World's first emoji-only programming language</span></h1>
+    <form id="code_form">
+      <div class="form-group">
+        <label for="code">Code</label>
+        <textarea class="form-control" name="code" id="code"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="input">Input</label>
+        <input class="form-control" name="input" id="input">
+      </div>
+      
+      <button class="btn btn-success" type="submit">Run</button>
+      
+      <div class="form-group output-group">
+        <label for="output">Output</label>
+        <output class="form-control" name="output" for="code" id="output"></output>
+      </div>
     </form>
-
-    <p id='output'></p>
-
-    <p><a id='url' href='http://skilldrick.co.uk/brainfuck'>This code and input as a URL</a></p>
-
-    <p><a href="https://github.com/skilldrick/brainfuck-js">
-      Fork me on github!</a></p>
-
-
-
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/brainfuck.js"></script>
-    <script>
-      var _gaq=[['_setAccount','UA-3174668-9'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+  </div>
+    
+    <script src="manager.js"></script>
   </body>
 </html>
